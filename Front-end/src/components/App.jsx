@@ -2,11 +2,11 @@ import "../styles/App.scss";
 import iconLaptop from "../images/laptop-code-solid.svg";
 import adaLogo from "../images/adalab.png";
 import { useState } from "react";
-import Header from "./Header";
-import Hero from "./Hero";
-import Preview from "./Preview";
+import Header from "./Layout/Header";
+import Hero from "./Pages/Hero";
+import Preview from "./Projects/Preview";
 import Form from "./Form";
-import Footer from "./Footer";
+import Footer from "./Layout/Footer";
 
 function App() {
   /*
@@ -48,9 +48,9 @@ function App() {
 
   localStorage.setItem("newProject", JSON.stringify(objToSend));
 
-  const [newProject, setNewProject] = useState(
-    JSON.parse(localStorage.getItem("newProject"))
-  );
+  // const [newProject, setNewProject] = useState(
+  //   JSON.parse(localStorage.getItem("newProject"))
+  // );
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
