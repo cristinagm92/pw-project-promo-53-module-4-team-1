@@ -1,22 +1,6 @@
-# Proyectos Molones
-
-[Proyectos Molones](https://patri-gl.github.io/pw-project-promo-53-module-3-team-1/) website has been created as a team project of module 3, working with React, within the [Adalab](https://adalab.es/) context of the Web Programming Intensive Bootcamp. 
-
-
-
-## Author
-
-- [@Patri-GL](https://github.com/Patri-GL)
-- [@Cipactlicasillas](https://github.com/Cipactlicasillas)
-- [@cristinagm92](https://github.com/cristinagm92)
-- [@paulactc](https://github.com/Cipactlicasillas)
-
-
-
-## License
 MIT License
 
-Copyright (c) 2017 Adalab
+Copyright (c) 2025 Patri-GL
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -35,24 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
-## Lessons Learned
-
-Use of React Library and deepening all previous knowledge on JS, HTML, Css. 
-Specific React lessons:
-- Events and State,
-- Components and Props,
-- Lifting,
-- Defining an Object,
-- Fetch and LocalStorage,
-- Router,
-- Change Control on Forms
-
-## Tech Stack
-
-- Html
-- Sass
-- Vite
-- JavaScript
-- React

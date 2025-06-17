@@ -63,17 +63,16 @@ function GetAvatar({ updateAvatar, text = "Get avatar!" }) {
         <input
           type="file"
           ref={myFileField}
-          style={{ display: "none" }}
+          className="addForm__hidden"
           onChange={uploadImage}
         />
       </label>
-
-      <div className="get-avatar__preview"></div>
     </div>
   );
 }
 
 GetAvatar.propTypes = {
+  avatar: PropTypes.string,
   updateAvatar: PropTypes.func.isRequired,
   text: PropTypes.string,
 };
