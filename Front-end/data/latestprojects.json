@@ -7,10 +7,10 @@
     "demo": "https://greenmarket.demo.com",
     "technologies": ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     "description": "Marketplace online enfocado en productos ecológicos, con integración de pagos y recomendaciones personalizadas.",
-    "author_image": "https://example.com/images/laura_gomez.jpg",
-    "author_name": "Laura Gómez",
+    "image": "https://example.com/images/laura_gomez.jpg",
+    "author": "Laura Gómez",
     "job": "Frontend Developer",
-    "project_photo": "https://example.com/images/greenmarket_project.jpg"
+    "photo": "https://example.com/images/greenmarket_project.jpg"
   },
   {
     "id": "project_002",
@@ -20,10 +20,10 @@
     "demo": "https://wellnessapp.demo.com",
     "technologies": ["Vue.js", "Firebase", "Sass"],
     "description": "App móvil para el seguimiento de hábitos saludables, ejercicios de meditación y rutinas personalizadas.",
-    "author_image": "https://example.com/images/laura_gomez.jpg",
-    "author_name": "Laura Gómez",
+    "image": "https://example.com/images/laura_gomez.jpg",
+    "author": "Laura Gómez",
     "job": "Full Stack Developer",
-    "project_photo": "https://example.com/images/wellnessapp_project.jpg"
+    "photo": "https://example.com/images/wellnessapp_project.jpg"
   },
   {
     "id": "project_003",
@@ -33,10 +33,10 @@
     "demo": "https://code4all.demo.com",
     "technologies": ["Angular", "Node.js", "PostgreSQL"],
     "description": "Plataforma educativa con cursos interactivos de programación y foros colaborativos.",
-    "author_image": "https://example.com/images/laura_gomez.jpg",
-    "author_name": "Laura Gómez",
+    "image": "https://example.com/images/laura_gomez.jpg",
+    "author": "Laura Gómez",
     "job": "UI/UX Designer",
-    "project_photo": "https://example.com/images/code4all_project.jpg"
+    "photo": "https://example.com/images/code4all_project.jpg"
   },
   {
     "id": "project_004",
@@ -46,9 +46,9 @@
     "demo": "https://travelsync.demo.com",
     "technologies": ["Next.js", "Supabase", "Styled Components"],
     "description": "Aplicación colaborativa para planear viajes en grupo, compartir itinerarios y coordinar presupuestos.",
-    "author_image": "https://example.com/images/laura_gomez.jpg",
-    "author_name": "Laura Gómez",
+    "image": "https://example.com/images/laura_gomez.jpg",
+    "author": "Laura Gómez",
     "job": "Product Designer",
-    "project_photo": "https://example.com/images/travelsync_project.jpg"
+    "photo": "https://example.com/images/travelsync_project.jpg"
   }
 ]
