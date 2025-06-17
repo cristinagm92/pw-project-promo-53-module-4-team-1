@@ -1,5 +1,6 @@
 {
   "name": "react-starter-kit",
+  "homepage": "./",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+<<<<<<< HEAD
     "deploy": "rm -rf docs; npm run build ; mv dist docs; git add docs; git commit -m 'Update GH PAges'; git push",
+=======
+    "deploy": "rm -rf docs; npm run build ; mv dist docs; git add docs; git commit -m 'Update GH Pages'; git push",
+>>>>>>> 620720b931adbe4f19c4e9eabd3d27d134f382ff
     "lint": "eslint .",
     "preview": "vite preview"
   },
