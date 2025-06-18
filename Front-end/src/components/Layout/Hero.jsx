@@ -1,18 +1,16 @@
 import { Link } from "react-router";
 
-function Hero() {
+function Hero({ buttonLink = "/create", children }) {
   return (
-    <>
-      <section className="hero">
-        <h2 className="title">Proyectos molones</h2>
-        <p className="hero__text">
-          Escaparate en línea para recoger ideas a través de la tecnología
-        </p>
-        <Link className="button--link" to="/create">
-          Ver proyectos
-        </Link>
-      </section>
-    </>
+    <section className="hero">
+      <h2 className="title">Proyectos molones</h2>
+      <p className="hero__text">
+        Escaparate en línea para recoger ideas a través de la tecnología
+      </p>
+      <Link className="button--link" to={buttonLink}>
+        {children || "Ver proyectos"}
+      </Link>
+    </section>
   );
 }
 

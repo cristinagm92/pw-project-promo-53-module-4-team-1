@@ -66,7 +66,7 @@ function Create() {
   return (
     <>
       {" "}
-      {/* <Hero /> */}
+      <Hero buttonLink="/">Ver proyectos</Hero>
       <Card
         name={data.name}
         slogan={data.slogan}

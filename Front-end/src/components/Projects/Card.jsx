@@ -1,4 +1,4 @@
-import Preview from "./PreviewCard";
+import PreviewCard from "./PreviewCard";
 
 function Card(props) {
   return (
@@ -7,10 +7,10 @@ function Card(props) {
         <div
           className="projectImage"
           style={{
-            backgroundImage: props.photo ? `url(${props.photo})` : null
+            backgroundImage: props.photo ? `url(${props.photo})` : null,
           }}
         ></div>
-        <Preview
+        <PreviewCard
           name={props.name}
           slogan={props.slogan}
           repo={props.repo}

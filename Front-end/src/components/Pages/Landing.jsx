@@ -1,21 +1,17 @@
 import Hero from "../Layout/Hero";
 import latestprojects from "../../../data/latestprojects.json";
 import { Link } from "react-router";
-import CardPreview from "../Projects/CardPreview";
+import PreviewCard from "../Projects/PreviewCard";
 
 function Landing() {
   return (
     <>
-      <Hero />
+      <Hero buttonLink="/create">Crear proyecto</Hero>
 
-      <Link className="button--link" to="/create">
-        Crear un nuevo proyecto
-      </Link>
-
-      <ul>
+      <ul className="landingUL">
         {latestprojects.map((projectObj) => (
-          <li key={projectObj.id}>
-            <CardPreview
+          <li className="landingLi" key={projectObj.id}>
+            <PreviewCard
               name={projectObj.name}
               slogan={projectObj.slogan}
               desc={projectObj.description}

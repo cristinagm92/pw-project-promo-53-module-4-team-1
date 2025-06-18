@@ -1,6 +1,6 @@
 import React from "react";
 
-function Preview(props) {
+function PreviewCard(props) {
   return (
     <>
       <article className="card">
@@ -56,4 +56,4 @@ function Preview(props) {
   );
 }
 
-export default Preview;
+export default PreviewCard;

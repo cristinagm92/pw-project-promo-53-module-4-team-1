@@ -1,4 +1,5 @@
 import GetAvatar from "../Pages/GetAvatar";
+import { Link } from "react-router";
 
 function Form(props) {
   const handleInput = (ev) => {

@@ -7,23 +7,23 @@
     "demo": "https://greenmarket.demo.com",
     "technologies": ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     "description": "Marketplace online enfocado en productos ecológicos, con integración de pagos y recomendaciones personalizadas.",
-    "image": "https://example.com/images/laura_gomez.jpg",
-    "author": "Laura Gómez",
+    "image": "https://images.pexels.com/photos/3732652/pexels-photo-3732652.jpeg",
+    "author": "Cristina Gómez",
     "job": "Frontend Developer",
-    "photo": "https://example.com/images/greenmarket_project.jpg"
+    "photo": "https://www.canva.com/design/DAGqsYpCFOE/ED7VkGP92mYkHVIpK1CXBw/view?utm_content=DAGqsYpCFOE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8e1867cc57"
   },
   {
     "id": "project_002",
-    "name": "WellnessApp",
-    "slogan": "Cuida tu mente y tu cuerpo",
-    "repo": "https://github.com/usuario/wellnessapp",
-    "demo": "https://wellnessapp.demo.com",
-    "technologies": ["Vue.js", "Firebase", "Sass"],
-    "description": "App móvil para el seguimiento de hábitos saludables, ejercicios de meditación y rutinas personalizadas.",
-    "image": "https://example.com/images/laura_gomez.jpg",
-    "author": "Laura Gómez",
-    "job": "Full Stack Developer",
-    "photo": "https://example.com/images/wellnessapp_project.jpg"
+    "name": "TravelSync",
+    "slogan": "Tu viaje, siempre sincronizado",
+    "repo": "https://github.com/usuario/travelsync",
+    "demo": "https://travelsync.demo.com",
+    "technologies": ["Next.js", "Supabase", "Styled Components"],
+    "description": "Aplicación colaborativa para planear viajes en grupo, compartir itinerarios y coordinar presupuestos.",
+    "image": "https://images.pexels.com/photos/4126738/pexels-photo-4126738.jpeg",
+    "author": "Cipactli Casillas",
+    "job": "Product Designer",
+    "photo": "https://www.canva.com/design/DAGqsVC1kCQ/2O3E6kbLlPQDSLvjVXq6HA/view?utm_content=DAGqsVC1kCQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h20bbdc7360"
   },
   {
     "id": "project_003",
@@ -33,22 +33,22 @@
     "demo": "https://code4all.demo.com",
     "technologies": ["Angular", "Node.js", "PostgreSQL"],
     "description": "Plataforma educativa con cursos interactivos de programación y foros colaborativos.",
-    "image": "https://example.com/images/laura_gomez.jpg",
-    "author": "Laura Gómez",
+    "image": "https://images.pexels.com/photos/4226462/pexels-photo-4226462.jpeg",
+    "author": "Paula Castillo",
     "job": "UI/UX Designer",
-    "photo": "https://example.com/images/code4all_project.jpg"
+    "photo": "https://www.canva.com/design/DAGqsTNFz8k/p0QDT3rWvuqrGMIWwmDebQ/view?utm_content=DAGqsTNFz8k&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h738b86fcc3"
   },
   {
     "id": "project_004",
-    "name": "TravelSync",
-    "slogan": "Tu viaje, siempre sincronizado",
-    "repo": "https://github.com/usuario/travelsync",
-    "demo": "https://travelsync.demo.com",
-    "technologies": ["Next.js", "Supabase", "Styled Components"],
-    "description": "Aplicación colaborativa para planear viajes en grupo, compartir itinerarios y coordinar presupuestos.",
-    "image": "https://example.com/images/laura_gomez.jpg",
-    "author": "Laura Gómez",
-    "job": "Product Designer",
-    "photo": "https://example.com/images/travelsync_project.jpg"
+    "name": "WellnessApp",
+    "slogan": "Cuida tu mente y tu cuerpo",
+    "repo": "https://github.com/usuario/wellnessapp",
+    "demo": "https://wellnessapp.demo.com",
+    "technologies": ["Vue.js", "Firebase", "Sass"],
+    "description": "App móvil para el seguimiento de hábitos saludables, ejercicios de meditación y rutinas personalizadas.",
+    "image": "https://images.pexels.com/photos/4646246/pexels-photo-4646246.jpeg",
+    "author": "Patri Gutiérrez",
+    "job": "Full Stack Developer",
+    "photo": "https://www.canva.com/design/DAGqsdkuEQA/2Q18Mc2M61whEeRgszkzOQ/view?utm_content=DAGqsdkuEQA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0e8b59224f"
   }
 ]

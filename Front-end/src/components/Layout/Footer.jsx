@@ -1,10 +1,10 @@
-import imgAdalab from "../../images/adalab.png";
+import imgCool from "../../images/transp.png";
 
 function Footer() {
   return (
     <>
       <footer className="footer">
-        <img className="logoSponsor" src={imgAdalab} alt="Logo Adalab" />
+        <img className="logoSponsor" src={imgCool} alt="Logo Adalab" />
       </footer>
     </>
   );
