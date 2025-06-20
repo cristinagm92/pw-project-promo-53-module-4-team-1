@@ -1,0 +1,30 @@
+{
+  "name": "proyectos-molones-team1",
+  "version": "1.0.0",
+  "description": "Proyecto del equipo 1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristinagm92/pw-project-promo-53-module-4-team-1.git"
+  },
+  "keywords": [
+    "server",
+    "api",
+    "training"
+  ],
+  "author": "paula&patri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cristinagm92/pw-project-promo-53-module-4-team-1/issues"
+  },
+  "homepage": "https://github.com/cristinagm92/pw-project-promo-53-module-4-team-1#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
