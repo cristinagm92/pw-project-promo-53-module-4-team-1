@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const data = require("./data/latestprojects.json");
+const data = require("../Front-end/data/latestprojects.json");
 // Creamos una vari con el servidor
 const server = express();
 
@@ -15,26 +15,26 @@ server.listen(port, () => {
   console.log(`Servidor iniciado <http://localhost:${port}>`);
 });
 
-// EJEMPLO DE ENDPOINT
+// // EJEMPLO DE ENDPOINT
 
-server.get("/", (req, res) => {
-  console.log("Holis"); // -> Se ve en la terminal
+// server.get("/", (req, res) => {
+//   console.log("Holis"); // -> Se ve en la terminal
 
-  res.send("Holis Adalabers!!!"); // -> Se ve en la página
-});
+//   res.send("Holis Adalabers!!!"); // -> Se ve en la página
+// });
 
 // ENDPOINTS DE APIS
 
-server.get("/api/proyectos", (req, res) => {
-  res.json({
-    success: true,
-    proyectos: [{}, {}],
-  });
-});
+// server.get("/api/proyectos", (req, res) => {
+//   res.json({
+//     success: true,
+//     proyectos: [{}, {}],
+//   });
+// });
 
 // SERVIDOR DE FICHEROS ESTÁTICOS
 
-server.use(express.static(path.join(__dirname, "../FRONT-END")));
+server.use(express.static(path.join(__dirname, "../Front-end")));
 
 // NO ENCONTRADO
 

@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cristinagm92/pw-project-promo-53-module-4-team-1.git"
+    "url": "https://github.com/cristinagm92/pw-project-promo-53-module-4-team-1.git"
   },
   "keywords": [
     "server",
     "api",
     "training"
   ],
-  "author": "paula&patri",
+  "author": "Team 1",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cristinagm92/pw-project-promo-53-module-4-team-1/issues"
