@@ -13,7 +13,10 @@ function Landing() {
   useEffect(() => {
     fetch("http://localhost:4000/api/project")
       .then((res) => res.json())
-      .then((data) => setProjects(data))
+      .then((data) => {
+        console.log(data);
+        setProjects(data);
+      })
       .catch((error) => console.error("Error al cargar proyectos:", error));
   }, []);
 

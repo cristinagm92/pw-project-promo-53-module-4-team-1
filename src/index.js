@@ -2,14 +2,16 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 require("dotenv").config();
-// const data = require("../Front-end/data/latestprojects.json");
-// Creamos una vari con el servidor
 const server = express();
 const mysql = require("mysql2/promise");
 // Configuramos server para que funcione bien como API
 server.use(cors());
 server.use(express.json());
-
+// server.use(express.static(path.join(__dirname / "../Front-end")));
+// server.use(express.static(path.join(__dirname / "../assets")));
+// server.get("/", (req, res) => {
+//   res.render("landing");
+// });
 // Arrancamos el servidor en el puerto 4000
 const port = 4000;
 server.listen(port, () => {
