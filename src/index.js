@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+require("dotenv").config();
 // const data = require("../Front-end/data/latestprojects.json");
 // Creamos una vari con el servidor
 const server = express();
@@ -30,11 +31,11 @@ server.listen(port, () => {
 
 async function getConnection() {
   const datosConexion = {
-    host: "adalabpromo53team-01-proyectoteam1-03bb.i.aivencloud.com",
-    port: "16388",
-    user: "avnadmin",
-    password: "AVNS_bzNzUlFkQJay8B1BovI",
-    database: "defaultdb",
+    host: process.env.MYSQL_HOST,
+    port: process.env.MYSQL_PORT,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_SCHEMA,
   };
   const conexion = await mysql.createConnection(datosConexion);
   await conexion.connect();
