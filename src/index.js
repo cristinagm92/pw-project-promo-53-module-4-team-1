@@ -7,6 +7,7 @@ const mysql = require("mysql2/promise");
 // Configuramos server para que funcione bien como API
 server.use(cors());
 server.use(express.json());
+server.set("view-engine", "ejs");
 // server.use(express.static(path.join(__dirname / "../Front-end")));
 // server.use(express.static(path.join(__dirname / "../assets")));
 // server.get("/", (req, res) => {
@@ -59,6 +60,18 @@ server.get("/api/project", async (req, res) => {
   res.json(results);
 });
 
+server.get("/project/:id", async (req, res) => {
+  const conn = await getConnection();
+  const [results] = await conn.query(
+    "SELECT * FROM defaultdb.project p JOIN defaultdb.author a ON (p.idproject = a.fk_project) WHERE p.idproject = ?",
+    [req.params.idproject]
+  );
+
+  await conn.end();
+
+  const projectData = results[0];
+  res.render("detail", projectData);
+});
 //   res.json({
 //     success: true,
 //     proyectos: datosConexion,
@@ -67,7 +80,7 @@ server.get("/api/project", async (req, res) => {
 
 // SERVIDOR DE FICHEROS ESTÁTICOS
 
-// NO BORRAR ! server.use(express.static(path.join(__dirname, "../Front-end/dist")));
+server.use(express.static(path.join(__dirname, "../Front-end/dist")));
 
 // NO ENCONTRADO
 
