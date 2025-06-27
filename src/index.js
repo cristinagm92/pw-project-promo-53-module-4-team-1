@@ -60,6 +60,80 @@ server.get("/api/project", async (req, res) => {
   res.json(results);
 });
 
+server.post("/api/project", async (req, res) => {
+  try {
+    const {
+      name,
+      slogan,
+      repo,
+      demo,
+      technologies,
+      desc,
+      photo,
+      image,
+      author,
+      job,
+    } = req.body;
+
+    if (!name || !desc || !author) {
+      return res.status(400).json({
+        success: false,
+        message: "Faltan campos obligatorios (name, desc, author)",
+      });
+    }
+
+    const conn = await getConnection();
+
+    const queryauthor = `
+      INSERT INTO project (image, author, job )
+      VALUES (?, ?, ?)
+    `;
+
+    const [resultauthor] = await conn.execute(queryauthor, [
+      image,
+      author,
+      job,
+    ]);
+
+    const authorId = resultauthor.insertauthor.idauthor;
+    const queryproject = `
+      INSERT INTO project (name, slogan, repo, demo, technologies, desc, photo)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+    `;
+
+    const [resultproject] = await conn.execute(queryproject, [
+      name,
+      slogan,
+      desc,
+      image || null,
+      technologies || null,
+      repo || null,
+      demo || null,
+      photo,
+      author.idauthor,
+    ]);
+    await conn.end();
+
+    // Construimos la URL del nuevo recurso
+    const newProjectUrl = `/project/${result.insertId}`;
+
+    res.status(201).json({
+      success: true,
+      authorId: authorId,
+      projectId: projectResult.insertId,
+      url: `/project/${projectResult.insertId}`,
+    });
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).json({
+      success: false,
+      message: "Database error",
+    });
+  } finally {
+    if (conn) await conn.end(); // Ensure connection closes
+  }
+});
+
 server.get("/project/:id", async (req, res) => {
   const conn = await getConnection();
 
