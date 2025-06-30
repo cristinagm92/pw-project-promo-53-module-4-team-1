@@ -135,6 +135,10 @@ server.post("/api/project", async (req, res) => {
   } finally {
     if (conn) await conn.end(); // Ensure connection closes
   }
+  res.json({
+    success: true,
+    cardUrl: serverAddress / +projectId,
+  });
 });
 
 server.get("/project/:id", async (req, res) => {
