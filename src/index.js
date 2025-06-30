@@ -5,7 +5,7 @@ require("dotenv").config();
 const serverAddress =
   process.env.NODE_ENV === "dev"
     ? "http://localhost:4000"
-    : "https://pw-project-promo-53-module-4-team-1.onrender.com/";
+    : "https://pw-project-promo-53-module-4-team-1.onrender.com";
 console.log(process.env.NODE_ENV);
 const server = express();
 const mysql = require("mysql2/promise");
@@ -163,11 +163,8 @@ server.get("/project/:id", async (req, res) => {
 
 // SERVIDOR DE FICHEROS ESTÁTICOS
 
-server.use(express.static(path.join(__dirname, "../Front-end/dist")));
-
 server.use(express.static(path.join(__dirname, "../views_static")));
-//server.use(express.static(path.join(__dirname / "../Front-end")));
-//server.use(express.static(path.join(__dirname / "../assets")));
+server.use(express.static(path.join(__dirname, "../public_html")));
 
 // NO ENCONTRADO
 
