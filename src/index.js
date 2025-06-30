@@ -2,19 +2,20 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 require("dotenv").config();
+const serverAddress =
+  process.env.NODE_ENV === "dev"
+    ? "http://localhost:4000"
+    : "https://pw-project-promo-53-module-4-team-1.onrender.com/";
+console.log(process.env.NODE_ENV);
 const server = express();
 const mysql = require("mysql2/promise");
 // Configuramos server para que funcione bien como API
 server.use(cors());
 server.use(express.json());
 server.set("view engine", "ejs");
-// server.use(express.static(path.join(__dirname / "../Front-end")));
-// server.use(express.static(path.join(__dirname / "../assets")));
-// server.get("/", (req, res) => {
-//   res.render("landing");
-// });
+
 // Arrancamos el servidor en el puerto 4000
-const port = 4000;
+const port = process.env.PORT || 4000;
 server.listen(port, () => {
   console.log(`Servidor iniciado <http://localhost:${port}>`);
 });
@@ -165,7 +166,8 @@ server.get("/project/:id", async (req, res) => {
 server.use(express.static(path.join(__dirname, "../Front-end/dist")));
 
 server.use(express.static(path.join(__dirname, "../views_static")));
-//falta
+//server.use(express.static(path.join(__dirname / "../Front-end")));
+//server.use(express.static(path.join(__dirname / "../assets")));
 
 // NO ENCONTRADO
 

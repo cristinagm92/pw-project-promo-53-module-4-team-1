@@ -7,11 +7,14 @@ import PreviewCard from "../Projects/PreviewCard";
 import React, { useEffect, useState } from "react";
 
 function Landing() {
+  const serverAddress = import.meta.env.DEV
+    ? "http://localhost:4000"
+    : "https://pw-project-promo-53-module-4-team-1.onrender.com";
   //  const Proyectos = () => {
   const [projects, setProjects] = useState(["project"]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/project")
+    fetch(serverAddress + "/api/project")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

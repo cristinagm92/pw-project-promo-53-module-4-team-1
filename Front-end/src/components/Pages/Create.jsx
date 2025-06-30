@@ -5,6 +5,9 @@ import Form from "../Projects/Form";
 
 function Create() {
   const [projectUrl, setProjectUrl] = useState("");
+  const serverAddress = import.meta.env.DEV
+    ? "http://localhost:4000"
+    : "https://pw-project-promo-53-module-4-team-1.onrender.com";
   const [data, setData] = useState(() => {
     const savedData = localStorage.getItem("data");
 
@@ -50,7 +53,7 @@ function Create() {
     ev.preventDefault();
     console.log("Llamando al handleSubmit de mamá!");
 
-    fetch("http://localhost:4000/api/project", {
+    fetch(serverAddress + "/api/project", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -58,8 +61,8 @@ function Create() {
       .then((res) => res.json())
       .then((dataResponse) => {
         console.log(dataResponse);
-        if (dataResponse.success && dataResponse.url) {
-          setProjectUrl(dataResponse.url); // 💡 Guardamos la URL en el estado
+        if (dataResponse.success && dataResponse.cardUrl) {
+          setProjectUrl(dataResponse.cardUrl); // 💡 Guardamos la URL en el estado
         }
       });
   };

@@ -1,6 +1,9 @@
 import React from "react";
 
 function PreviewCard(props) {
+  const serverAddress = import.meta.env.DEV
+    ? "http://localhost:4000"
+    : "https://pw-project-promo-53-module-4-team-1.onrender.com";
   return (
     <>
       <article className="card">
@@ -51,7 +54,7 @@ function PreviewCard(props) {
             </a>
             <a
               className="icon icon__sun"
-              href={props.cardUrl || "http://localhost:5173/#"}
+              href={serverAddress + props.projectUrl}
               title="Haz click para ver tu tarjeta"
             >
               Card link
