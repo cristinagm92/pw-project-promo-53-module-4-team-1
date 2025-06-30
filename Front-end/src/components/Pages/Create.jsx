@@ -4,6 +4,7 @@ import Card from "../Projects/Card";
 import Form from "../Projects/Form";
 
 function Create() {
+  const [projectUrl, setProjectUrl] = useState("");
   const [data, setData] = useState(() => {
     const savedData = localStorage.getItem("data");
 
@@ -49,7 +50,7 @@ function Create() {
     ev.preventDefault();
     console.log("Llamando al handleSubmit de mamá!");
 
-    fetch("https://dev.adalab.es/api/projectCard", {
+    fetch("http://localhost:4000/api/project", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -57,6 +58,9 @@ function Create() {
       .then((res) => res.json())
       .then((dataResponse) => {
         console.log(dataResponse);
+        if (dataResponse.success && dataResponse.url) {
+          setProjectUrl(dataResponse.url); // 💡 Guardamos la URL en el estado
+        }
       });
   };
   useEffect(() => {
@@ -78,6 +82,7 @@ function Create() {
         job={data.job}
         photo={data.photo}
         image={data.image}
+        projectUrl={projectUrl}
       />
       <Form
         data={data}

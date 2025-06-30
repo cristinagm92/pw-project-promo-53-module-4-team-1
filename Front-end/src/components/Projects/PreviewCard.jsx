@@ -49,6 +49,13 @@ function PreviewCard(props) {
             >
               GitHub link
             </a>
+            <a
+              className="icon icon__sun"
+              href={props.cardUrl || "http://localhost:5173/#"}
+              title="Haz click para ver tu tarjeta"
+            >
+              Card link
+            </a>
           </div>
         </div>
       </article>

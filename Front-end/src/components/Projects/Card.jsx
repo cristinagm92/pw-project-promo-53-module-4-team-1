@@ -20,6 +20,7 @@ function Card(props) {
           author={props.author}
           job={props.job}
           image={props.image}
+          projectUrl={props.projectUrl}
         />
       </section>
     </>

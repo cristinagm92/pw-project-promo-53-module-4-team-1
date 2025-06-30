@@ -61,6 +61,8 @@ server.get("/api/project", async (req, res) => {
 });
 
 server.post("/api/project", async (req, res) => {
+  let conn;
+
   try {
     const {
       name,
@@ -82,10 +84,10 @@ server.post("/api/project", async (req, res) => {
       });
     }
 
-    const conn = await getConnection();
+    conn = await getConnection();
 
     const queryauthor = `
-      INSERT INTO project (image, author, job )
+      INSERT INTO author (image, author, job )
       VALUES (?, ?, ?)
     `;
 
@@ -94,34 +96,34 @@ server.post("/api/project", async (req, res) => {
       author,
       job,
     ]);
+    console.log(resultauthor);
 
-    const authorId = resultauthor.insertauthor.idauthor;
+    const authorId = resultauthor.insertId;
     const queryproject = `
-      INSERT INTO project (name, slogan, repo, demo, technologies, desc, photo)
-      VALUES (?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO project (name, slogan, repo, demo, technologies, \`desc\`, photo, author_idauthor)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     `;
 
-    const [resultproject] = await conn.execute(queryproject, [
+    const [resultProject] = await conn.execute(queryproject, [
       name,
       slogan,
+      repo,
+      demo,
+      technologies,
       desc,
-      image || null,
-      technologies || null,
-      repo || null,
-      demo || null,
       photo,
-      author.idauthor,
+      authorId,
     ]);
-    await conn.end();
+    // await conn.end();
 
     // Construimos la URL del nuevo recurso
-    const newProjectUrl = `/project/${result.insertId}`;
+    const newProjectUrl = `/project/${resultProject.insertId}`;
 
     res.status(201).json({
       success: true,
       authorId: authorId,
-      projectId: projectResult.insertId,
-      url: `/project/${projectResult.insertId}`,
+      projectId: resultProject.insertId,
+      cardUrl: newProjectUrl,
     });
   } catch (error) {
     console.error("Error:", error);
